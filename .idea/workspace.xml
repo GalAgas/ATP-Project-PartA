@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a865024-9057-4d63-8656-5d6ad17a7d33" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585303696634</updated>
-      <workItem from="1585303697873" duration="717000" />
+      <workItem from="1585303697873" duration="1160000" />
     </task>
     <task id="LOCAL-00001" summary="Hi Gal">
       <created>1585303832377</created>
@@ -74,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585303832377</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init part A">
+      <created>1585304576866</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585304576866</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,17 +88,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hi Gal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hi Gal" />
+    <MESSAGE value="init part A" />
+    <option name="LAST_COMMIT_MESSAGE" value="init part A" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585303716370">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1585303716370" />
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1585304462053">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1585304990268">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585304462053" />
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585304990268" />
     <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1585304390920">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -113,9 +120,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585304474308" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1585303837926">
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1585304586076">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1585303837926" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1585304586076" />
   </component>
 </project>
