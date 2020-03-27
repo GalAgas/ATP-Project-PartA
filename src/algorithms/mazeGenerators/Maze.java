@@ -35,4 +35,21 @@ public class Maze
     {
         return goalPosition;
     }
+
+    public void setStartPosition(int row, int col)
+    {
+        this.startPosition = new Position(row, col);
+        maze[row][col] = 'S'; //not sure we need to change this-only in the print?
+    }
+
+    public void setGoalPosition(int row, int col)
+    {
+        this.goalPosition = new Position(row, col);
+        maze[row][col] = 'E';
+    }
+
+    public void print()
+    {
+
+    }
 }
