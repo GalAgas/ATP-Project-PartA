@@ -21,8 +21,5 @@ public class Position
         return col;
     }
 
-    public void print()
-    {
-        System.out.println("{" + row + "," + col +"}");
-    }
+    public String toString() { return ("{" + row + "," + col +"}"); }
 }
