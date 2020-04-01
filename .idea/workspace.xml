@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="72cdee8f-82bf-444c-a1be-97046b5b21b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
     </list>
@@ -23,41 +25,43 @@
     <session id="-287079037">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="574" />
-          <entry key="txt" value="52" />
+          <entry key="java" value="1450" />
+          <entry key="txt" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="574" />
-          <entry key="PLAIN_TEXT" value="52" />
+          <entry key="JAVA" value="1450" />
+          <entry key="PLAIN_TEXT" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="34" />
+            <state relative-caret-position="121">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
                 <element signature="e#371#372#0" expanded="true" />
                 <element signature="e#398#399#0" expanded="true" />
@@ -65,6 +69,27 @@
                 <element signature="e#480#481#0" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
                 <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1585748742024" expanded="true" signature="1781:4097" ph="..." />
+                <marker date="1585748742024" expanded="false" signature="2016:2603" ph="..." />
+                <marker date="1585748742024" expanded="true" signature="2191:2384" ph="..." />
+                <marker date="1585748742024" expanded="false" signature="4119:6420" ph="..." />
+                <marker date="1585748742024" expanded="false" signature="6442:8749" ph="..." />
               </folding>
             </state>
           </provider>
@@ -73,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
+            <state relative-caret-position="220">
               <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
               <folding>
                 <element signature="e#235#236#0" expanded="true" />
@@ -86,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="78">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,10 +121,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/concurrent/ThreadLocalRandom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6226">
+              <caret line="336" selection-start-line="336" selection-end-line="336" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/RunMazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+            <state relative-caret-position="73">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -107,7 +141,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="110">
               <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
@@ -116,7 +150,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
+            <state relative-caret-position="506">
               <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
@@ -138,15 +172,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/../../גיטהאב גיבוי/Maze/src/algorithms/mazeGenerators/AMazeGenerator.java" />
         <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java" />
         <option value="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/RunMazeGenerator.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-14" />
-    <option name="y" value="184" />
+    <option name="x" value="-15" />
+    <option name="y" value="183" />
     <option name="width" value="879" />
     <option name="height" value="1032" />
   </component>
@@ -159,7 +195,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,12 +217,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585477378205" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585758701982" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -282,14 +319,28 @@
       <option name="project" value="LOCAL" />
       <updated>1585412738299</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="started-AMG-updated choose start&amp;goal positions, maze, position, EMG, IMG">
+      <created>1585498086375</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585498086375</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated-myMaze.generate, AMG, maze, position, EMG, IMG">
+      <created>1585499123738</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585499123738</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.048582997" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13765182" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -298,7 +349,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19538188" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18827708" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,7 +405,8 @@
     <MESSAGE value="started-maze, position, EMG, IMG, AMG" />
     <MESSAGE value="started-maze, position-set positions, EMG-including partial start and goal position up side, IMG, AMG" />
     <MESSAGE value="started-AMG-updated choose start&amp;goal positions, maze, position, EMG, IMG" />
-    <option name="LAST_COMMIT_MESSAGE" value="started-AMG-updated choose start&amp;goal positions, maze, position, EMG, IMG" />
+    <MESSAGE value="updated-myMaze.generate, AMG, maze, position, EMG, IMG" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated-myMaze.generate, AMG, maze, position, EMG, IMG" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1585395710942">
@@ -387,33 +439,23 @@
     <state width="1237" height="162" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585399686515" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="506">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/../../גיטהאב גיבוי/Maze/src/algorithms/mazeGenerators/AMazeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3278">
-          <caret line="157" column="59" selection-start-line="157" selection-start-column="59" selection-end-line="157" selection-end-column="59" />
-          <folding>
-            <element signature="method#measureAlgorithmTimeMillis#0;class#AMazeGenerator#0" />
-          </folding>
+        <state relative-caret-position="-2332">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
+        <state relative-caret-position="220">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
             <element signature="e#235#236#0" expanded="true" />
@@ -422,27 +464,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RunMazeGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="6" column="54" lean-forward="true" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="110">
+          <caret line="8" selection-start-line="8" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/Maze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="34" />
+        <state relative-caret-position="121">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
           <folding>
             <element signature="e#371#372#0" expanded="true" />
             <element signature="e#398#399#0" expanded="true" />
@@ -450,6 +482,49 @@
             <element signature="e#480#481#0" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />
             <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/concurrent/ThreadLocalRandom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6226">
+          <caret line="336" selection-start-line="336" selection-end-line="336" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/RunMazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1585748742024" expanded="true" signature="1781:4097" ph="..." />
+            <marker date="1585748742024" expanded="false" signature="2016:2603" ph="..." />
+            <marker date="1585748742024" expanded="true" signature="2191:2384" ph="..." />
+            <marker date="1585748742024" expanded="false" signature="4119:6420" ph="..." />
+            <marker date="1585748742024" expanded="false" signature="6442:8749" ph="..." />
           </folding>
         </state>
       </provider>

@@ -33,13 +33,11 @@ public class Maze
     public void setStartPosition(int row, int col)
     {
         this.startPosition = new Position(row, col);
-        this.maze[row][col] = 'S'; //not sure we need to change this-only in the print?
     }
 
     public void setGoalPosition(int row, int col)
     {
         this.goalPosition = new Position(row, col);
-        this.maze[row][col] = 'E';
     }
 
     public void print()
@@ -47,7 +45,14 @@ public class Maze
         for (int i=0; i<rows; i++)
         {
             for (int j=0; j<cols; j++)
-                System.out.print(this.maze[i][j]);
+            {
+                if(i == startPosition.getRowIndex() && j == startPosition.getColumnIndex())
+                    System.out.print('S');
+                else if(i == goalPosition.getRowIndex() && j == goalPosition.getColumnIndex())
+                    System.out.print('E');
+                else
+                    System.out.print(this.maze[i][j]);
+            }
             System.out.println();
         }
     }
