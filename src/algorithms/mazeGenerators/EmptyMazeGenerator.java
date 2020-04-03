@@ -1,7 +1,5 @@
 package algorithms.mazeGenerators;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public class EmptyMazeGenerator extends AMazeGenerator{
     @Override
     public Maze generate(int rows, int cols)

@@ -50,7 +50,7 @@ public class MyMazeGenerator extends AMazeGenerator
             }
 
         }
-        chooseStartandGoal(myMaze, rows, cols);
+        //chooseStartandGoal(myMaze, rows, cols);
         return myMaze;
     }
 }
