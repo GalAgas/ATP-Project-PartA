@@ -11,10 +11,7 @@ public class Position
         this.col = col;
     }
 
-    public int getRowIndex()
-    {
-        return row;
-    }
+    public int getRowIndex() { return row; }
 
     public int getColumnIndex()
     {

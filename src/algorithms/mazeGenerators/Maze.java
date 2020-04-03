@@ -4,7 +4,7 @@ public class Maze
 {
     private int rows;
     private int cols;
-    private char[][] maze;
+    private int[][] maze;
     private Position startPosition;
     private Position goalPosition;
 
@@ -12,10 +12,10 @@ public class Maze
     {
         this.rows = rows;
         this.cols = cols;
-        maze = new char[rows][cols];
+        maze = new int[rows][cols];
     }
 
-    public char[][] getMaze()
+    public int[][] getMaze()
     {
         return maze;
     }

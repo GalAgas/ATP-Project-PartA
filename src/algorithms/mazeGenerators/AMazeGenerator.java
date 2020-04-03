@@ -18,7 +18,7 @@ public abstract class AMazeGenerator implements IMazeGenerator
         ArrayList<Integer> allZerosInRow = new ArrayList<Integer>();
         for (int i=iLoop; i<rowLength; i++)
         {
-            if(maze.getMaze()[row][i] == '0')
+            if(maze.getMaze()[row][i] == 0)
             {
                 allZerosInRow.add(i);
             }
@@ -32,7 +32,7 @@ public abstract class AMazeGenerator implements IMazeGenerator
         ArrayList<Integer> allZerosInCol = new ArrayList<Integer>();
         for (int i=iLoop; i<colLength; i++)
         {
-            if(maze.getMaze()[i][col] == '0')
+            if(maze.getMaze()[i][col] == 0)
             {
                 allZerosInCol.add(i);
             }
