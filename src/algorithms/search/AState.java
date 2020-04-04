@@ -5,10 +5,12 @@ public abstract class AState
     private String name;
     private int cost;
     private AState parent;
+    private AState[] neigbours;
 
     public AState(String name)
     {
         this.name = name;
+        neigbours = new AState[4];
     }
 
 
@@ -35,6 +37,17 @@ public abstract class AState
     public AState getParent() {
         return parent;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public AState[] getNeigbours() {
+        return neigbours;
+    }
+
+    public String toString() { return ("{" + name.charAt(0) + "," + name.charAt(1) +"}"); }
+
 }
 
 

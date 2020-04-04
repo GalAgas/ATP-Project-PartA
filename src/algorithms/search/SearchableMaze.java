@@ -9,18 +9,41 @@ public class SearchableMaze implements ISearchable
     private Maze maze;
     private AState start;
     private AState goal;
+    private ArrayList<AState> allStates;
+
 
     public SearchableMaze(Maze maze)
     {
         this.maze = maze;
         int Srow = maze.getStartPosition().getRowIndex();
         int Scol = maze.getStartPosition().getColumnIndex();
-        start = new MazeState(Integer.toString(Srow)+Integer.toString((Scol)));
 
         int Grow = maze.getGoalPosition().getRowIndex();
         int Gcol = maze.getGoalPosition().getColumnIndex();
-        goal = new MazeState(Integer.toString(Grow)+Integer.toString(Gcol));
 
+        allStates = new ArrayList<AState>();
+        for (int i=0; i<maze.getRows(); i++)
+        {
+            for (int j=0; j<maze.getCols(); j++)
+            {
+                if(maze.isZero(i,j))
+                {
+                    AState newState = new MazeState(Integer.toString(i)+Integer.toString(j));
+                    allStates.add(newState);
+
+                    newState.getNeigbours()[0] = up(newState);
+                    newState.getNeigbours()[1] = right(newState);
+                    newState.getNeigbours()[2] = down(newState);
+                    newState.getNeigbours()[3] = left(newState);
+
+                    if (i == Srow && j == Scol)
+                        start = newState;
+
+                    if (i == Grow && j == Gcol)
+                        goal =newState;
+                }
+            }
+        }
     }
 
 
@@ -70,48 +93,71 @@ public class SearchableMaze implements ISearchable
     {
         ArrayList<AState> possibleS = new ArrayList<AState>();
 
-        AState up = up(state);
-        AState right = right(state);
-        AState left = left(state);
-        AState down = down(state);
+        AState upR = null;
+        AState upL = null;
+        AState downR = null;
+        AState downL = null;
 
-        boolean upRight = false;
-        boolean upLeft = false;
-        boolean downRight = false;
-        boolean downLeft = false;
 
-        if (up != null)
+        //up
+        if (state.getNeigbours()[0] != null)
         {
-            possibleS.add(up);
-            AState upR = right(up);
+            possibleS.add(state.getNeigbours()[0]);
+            upR = state.getNeigbours()[0].getNeigbours()[1];
             if (upR != null)
-            {
-                upRight = true;
                 possibleS.add(upR);
-            }
+            upL = state.getNeigbours()[0].getNeigbours()[3];
+            if (upL != null)
+                possibleS.add(upL);
         }
 
-        if (right != null)
+        //right
+        if (state.getNeigbours()[1] != null)
         {
-            possibleS.add(right);
-            if (!upRight)
+            possibleS.add(state.getNeigbours()[1]);
+            if (upR == null)
             {
+                upR = state.getNeigbours()[1].getNeigbours()[0];
+                if (upR != null)
+                    possibleS.add(upR);
+            }
+            downR = state.getNeigbours()[1].getNeigbours()[2];
+            if (downR != null)
+                possibleS.add(downR);
+        }
 
+        //down
+        if (state.getNeigbours()[2] != null)
+        {
+            possibleS.add(state.getNeigbours()[2]);
+            if (downR == null)
+            {
+                downR = state.getNeigbours()[2].getNeigbours()[1];
+                if (downR != null)
+                    possibleS.add(downR);
+            }
+            downL = state.getNeigbours()[2].getNeigbours()[3];
+            if (downL != null)
+                possibleS.add(downL);
+        }
+
+        //left
+        if (state.getNeigbours()[3] != null)
+        {
+            possibleS.add(state.getNeigbours()[3]);
+            if (upL == null)
+            {
+                upL = state.getNeigbours()[3].getNeigbours()[0];
+                if (upL != null)
+                    possibleS.add(upL);
+            }
+            if (downL == null)
+            {
+                downL = state.getNeigbours()[3].getNeigbours()[2];
+                if (downL != null)
+                    possibleS.add(downL);
             }
         }
-
-        if (left != null)
-        {
-            possibleS.add(left);
-        }
-
-        if (down != null)
-        {
-            possibleS.add(down);
-        }
-
-
-
         return possibleS;
     }
 

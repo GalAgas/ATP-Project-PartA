@@ -4,6 +4,7 @@ public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
 {
 
     private String name;
+    private int visitedNoeds;
 
     @Override
     public String getName()
@@ -11,9 +12,14 @@ public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
         return name;
     }
 
+    public ASearcinghAlgorithm(String name)
+    {
+        this.name = name;
+    }
 
     public int getNumberOfNodesEvaluated()
     {
-        return 0;
+        return visitedNoeds;
     }
+
 }
