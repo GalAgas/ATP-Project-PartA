@@ -59,11 +59,11 @@ public class Maze
         {
             for (int j=0; j<cols; j++)
             {
-//                if(i == startPosition.getRowIndex() && j == startPosition.getColumnIndex())
-//                    System.out.print('S');
-//                else if(i == goalPosition.getRowIndex() && j == goalPosition.getColumnIndex())
-//                    System.out.print('E');
-//                else
+                if(i == startPosition.getRowIndex() && j == startPosition.getColumnIndex())
+                    System.out.print('S');
+                else if(i == goalPosition.getRowIndex() && j == goalPosition.getColumnIndex())
+                    System.out.print('E');
+                else
                     System.out.print(this.maze[i][j]);
             }
             System.out.println();

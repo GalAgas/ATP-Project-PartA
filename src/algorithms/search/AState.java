@@ -6,11 +6,13 @@ public abstract class AState
     private int cost;
     private AState parent;
     private AState[] neigbours;
+    private boolean isVisited;
 
     public AState(String name)
     {
         this.name = name;
         neigbours = new AState[4];
+        isVisited = false;
     }
 
 
@@ -40,6 +42,14 @@ public abstract class AState
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public boolean isVisited() {
+        return isVisited;
+    }
+
+    public void setVisited(boolean visited) {
+        isVisited = visited;
     }
 
     public AState[] getNeigbours() {
