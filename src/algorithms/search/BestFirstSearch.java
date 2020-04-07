@@ -4,7 +4,7 @@ public class BestFirstSearch extends BreadthFirstSearch
 {
     public BestFirstSearch()
     {
-        super("Best First Search");
+        super.name = "Best First Search";
     }
 
     @Override

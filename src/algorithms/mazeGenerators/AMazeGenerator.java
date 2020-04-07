@@ -1,6 +1,8 @@
 package algorithms.mazeGenerators;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class AMazeGenerator implements IMazeGenerator
@@ -13,37 +15,119 @@ public abstract class AMazeGenerator implements IMazeGenerator
         return endTime-startTime;
     }
 
-    public int chooseRandCol(Maze maze, int row, int rowLength, int iLoop)
+    public int chooseRandCol(Maze maze, int row, int colLength)
     {
         ArrayList<Integer> allZerosInRow = new ArrayList<Integer>();
-        for (int i=iLoop; i<rowLength; i++)
+        for (int i=1; i<colLength-1; i++)
         {
             if(maze.getMaze()[row][i] == 0)
-            {
                 allZerosInRow.add(i);
-            }
         }
         int randIndex = ThreadLocalRandom.current().nextInt(0, allZerosInRow.size());
         return allZerosInRow.get(randIndex);
     }
 
-    public int chooseRandRow(Maze maze, int col, int colLength, int iLoop)
+    public int chooseRandRow(Maze maze, int col, int rowLength)
     {
         ArrayList<Integer> allZerosInCol = new ArrayList<Integer>();
-        for (int i=iLoop; i<colLength; i++)
+        for (int i=1; i<rowLength-1; i++)
         {
             if(maze.getMaze()[i][col] == 0)
-            {
                 allZerosInCol.add(i);
-            }
         }
         int randIndex = ThreadLocalRandom.current().nextInt(0, allZerosInCol.size());
         return allZerosInCol.get(randIndex);
     }
 
+    public int[] initializePosition(Maze maze, int chosenFrame, boolean status)
+    {
+        int[] pos = new int[2]; //0-row , 1-col
+        if (chosenFrame == 0) //up
+        {
+            if (status)
+                pos[0] = 1;
+            else
+                pos[0] = 0;
+            pos[1] = chooseRandCol(maze, pos[0], maze.getCols());
+        }
+        if (chosenFrame == 1) //down
+        {
+            if (status)
+                pos[0] = maze.getRows()-2;
+            else
+                pos[0] = maze.getRows()-1;
+            pos[1] = chooseRandCol(maze, pos[0], maze.getCols());
+        }
+        if (chosenFrame == 2) //right
+        {
+            if (status)
+                pos[1] = maze.getCols()-2;
+            else
+                pos[1] = maze.getCols()-1;
+            pos[0] = chooseRandRow(maze, pos[1], maze.getRows());
+        }
+        if (chosenFrame == 3) //left
+        {
+            if (status)
+                pos[1] = 1;
+            else
+                pos[1] = 0;
+            pos[0] = chooseRandRow(maze, pos[1], maze.getRows());
+        }
+        return pos;
+    }
+
     public void chooseStartandGoal(Maze maze, int rows, int cols)
     {
-        //selects a random side of the frame - up, down, right or left for the start.
+        //creates list of possible frames to choose from
+        List<Integer> frameList = new ArrayList<>();
+        for (int i=0; i<cols; i++)
+        {
+            //up = 0
+            if(maze.getMaze()[0][i] == 0 && !frameList.contains(0))
+                frameList.add(0);
+            //down = 1
+            if(maze.getMaze()[rows-1][i] == 0 && !frameList.contains(1))
+                frameList.add(1);
+        }
+        for (int i=0; i<rows; i++)
+        {
+            //right = 2
+            if(maze.getMaze()[i][cols-1] == 0 && !frameList.contains(2))
+                frameList.add(2);
+            //left = 3
+            if(maze.getMaze()[i][0] == 0 && !frameList.contains(3))
+                frameList.add(3);
+        }
+        //Start
+        Random rand = new Random();
+        int frameSideStart = frameList.get(rand.nextInt(frameList.size())); //randomly chooses a side from the frame list
+        int[] startPos = initializePosition(maze, frameSideStart, false);
+        maze.setStartPosition(startPos[0], startPos[1]);
+        //Goal
+        frameList.remove(frameList.indexOf(frameSideStart)); //removes the selected frame of start
+        int frameSideGoal;
+        boolean threeWalls;
+        if (frameList.isEmpty()) //3 walls of 1's
+        {
+            List<Integer> secondFrameList = new ArrayList<>();
+            for (int i=0; i<4; i++)
+            {
+                if (frameSideStart != i)
+                    secondFrameList.add(i);
+            }
+            frameSideGoal = secondFrameList.get(rand.nextInt(secondFrameList.size()));
+            threeWalls = true;
+        }
+        else
+        {
+            frameSideGoal = frameList.get(rand.nextInt(frameList.size())); //randomly chooses a side from the frame list
+            threeWalls = false;
+        }
+        int[] goalPos = initializePosition(maze, frameSideGoal, threeWalls);;
+        maze.setGoalPosition(goalPos[0], goalPos[1]);
+
+        /*//selects a random side of the frame - up, down, right or left for the start.
         int frameSideStart = ThreadLocalRandom.current().nextInt(0, 4);
         int startRandomCol;
         int startRandomRow;
@@ -303,6 +387,6 @@ public abstract class AMazeGenerator implements IMazeGenerator
                     maze.setGoalPosition(rows-1,goalRandomCol);
                 }
             }
-        }
+        }*/
     }
 }

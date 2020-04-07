@@ -40,10 +40,7 @@ public class Maze
         this.goalPosition = new Position(row, col);
     }
 
-    public boolean isZero (int row, int col)
-    {
-        return maze[row][col] == 0;
-    }
+    public boolean isZero (int row, int col) { return maze[row][col] == 0; }
 
     public int getRows() {
         return rows;

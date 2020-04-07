@@ -44,19 +44,13 @@ public abstract class AState
         this.name = name;
     }
 
-    public boolean isVisited() {
-        return isVisited;
-    }
+    public boolean isVisited() { return isVisited; }
 
-    public void setVisited(boolean visited) {
-        isVisited = visited;
-    }
+    public void setVisited(boolean visited) { isVisited = visited; }
 
-    public AState[] getNeigbours() {
-        return neigbours;
-    }
+    public AState[] getNeigbours() { return neigbours; }
 
-    public String toString() { return ("{" + name.charAt(0) + "," + name.charAt(1) +"}"); }
+    public String toString() { return name; }
 
 }
 

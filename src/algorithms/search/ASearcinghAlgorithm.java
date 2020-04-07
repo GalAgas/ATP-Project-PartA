@@ -3,23 +3,12 @@ package algorithms.search;
 public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
 {
 
-    private String name;
+    protected String name;
     private int visitedNoeds;
 
     @Override
-    public String getName()
-    {
-        return name;
-    }
+    public String getName() { return name; }
 
-    public ASearcinghAlgorithm(String name)
-    {
-        this.name = name;
-    }
-
-    public int getNumberOfNodesEvaluated()
-    {
-        return visitedNoeds;
-    }
+    public int getNumberOfNodesEvaluated() { return visitedNoeds; }
 
 }

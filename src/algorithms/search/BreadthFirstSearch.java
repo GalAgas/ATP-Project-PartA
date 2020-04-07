@@ -11,8 +11,8 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
 
     private Queue<AState> Q;
 
-    public BreadthFirstSearch(String best_first_search) {
-        super("Breadth First Search");
+    public BreadthFirstSearch() {
+        super.name = "Breadth First Search";
         Q = new LinkedList<AState>();
     }
 

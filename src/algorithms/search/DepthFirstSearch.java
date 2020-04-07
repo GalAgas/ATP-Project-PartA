@@ -3,8 +3,8 @@ package algorithms.search;
 public class DepthFirstSearch extends ASearcinghAlgorithm
 {
 
-    public DepthFirstSearch(String name) {
-        super("Depth First Search");
+    public DepthFirstSearch() {
+        super.name = "Depth First Search";
     }
 
     @Override

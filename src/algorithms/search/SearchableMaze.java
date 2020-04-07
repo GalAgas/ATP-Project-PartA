@@ -28,7 +28,7 @@ public class SearchableMaze implements ISearchable
             {
                 if(maze.isZero(i,j))
                 {
-                    AState newState = new MazeState(Integer.toString(i)+Integer.toString(j));
+                    AState newState = new MazeState(Integer.toString(i)+","+Integer.toString(j));
                     allStates.add(newState);
 
                     newState.getNeigbours()[0] = up(newState);
@@ -40,7 +40,7 @@ public class SearchableMaze implements ISearchable
                         start = newState;
 
                     if (i == Grow && j == Gcol)
-                        goal =newState;
+                        goal = newState;
                 }
             }
         }
@@ -49,41 +49,45 @@ public class SearchableMaze implements ISearchable
 
     public AState up (AState state)
     {
-        int row = Integer.valueOf(state.getName().charAt(0));
-        int col = Integer.valueOf(state.getName().charAt(1));
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        int col = Integer.parseInt(state.getName().substring(index+1));
         MazeState up = null;
         if (row-1 >= 0 && maze.isZero(row-1, col))
-            up = new MazeState(Integer.toString(row - 1)+Integer.toString(col));
+            up = new MazeState(Integer.toString(row - 1)+","+Integer.toString(col));
         return up;
     }
 
     public AState right (AState state)
     {
-        int row = Integer.valueOf(state.getName().charAt(0));
-        int col = Integer.valueOf(state.getName().charAt(1));
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        int col = Integer.parseInt(state.getName().substring(index+1));
         MazeState right = null;
         if (col+1 <= maze.getCols()-1 && maze.isZero(row, col+1))
-            right = new MazeState(Integer.toString(row)+Integer.toString(col+1));
+            right = new MazeState(Integer.toString(row)+","+Integer.toString(col+1));
         return right;
     }
 
     public AState left (AState state)
     {
-        int row = Integer.valueOf(state.getName().charAt(0));
-        int col = Integer.valueOf(state.getName().charAt(1));
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        int col = Integer.parseInt(state.getName().substring(index+1));
         MazeState left = null;
         if (col-1 >= 0 && maze.isZero(row, col-1))
-            left = new MazeState(Integer.toString(row)+Integer.toString(col-1));
+            left = new MazeState(Integer.toString(row)+","+Integer.toString(col-1));
         return left;
     }
 
     public AState down (AState state)
     {
-        int row = Integer.valueOf(state.getName().charAt(0));
-        int col = Integer.valueOf(state.getName().charAt(1));
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        int col = Integer.parseInt(state.getName().substring(index+1));
         MazeState down = null;
         if (row+1 <= maze.getRows()-1 && maze.isZero(row+1, col))
-            down = new MazeState(Integer.toString(row + 1)+Integer.toString(col));
+            down = new MazeState(Integer.toString(row + 1)+","+Integer.toString(col));
         return down;
     }
 
@@ -161,14 +165,8 @@ public class SearchableMaze implements ISearchable
         return possibleS;
     }
 
-    public AState getStart()
-    {
-        return start;
-    }
+    public AState getStart() { return start; }
 
-    public AState getGoal()
-    {
-        return goal;
-    }
+    public AState getGoal() { return goal; }
 
 }
