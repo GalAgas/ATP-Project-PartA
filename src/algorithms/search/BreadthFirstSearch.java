@@ -30,17 +30,20 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
             if (currState == s.getGoal())
             {
                 //building the solution's path
-                ArrayList<AState> path = new ArrayList<AState>();
-                while (currState != null)
-                {
-                    path.add(currState);
-                    //changes all isVisited back to false
-                    currState.setVisited(false);
-                    currState = currState.getParent();
-                }
-                Collections.reverse(path);
-                sol = new Solution(path);
+                sol = createSolPath (currState);
                 return sol;
+
+//
+//                ArrayList<AState> path = new ArrayList<AState>();
+//                while (currState != null)
+//                {
+//                    path.add(currState);
+//                    //changes all isVisited back to false
+//                    currState.setVisited(false);
+//                    currState = currState.getParent();
+//                }
+//                Collections.reverse(path);
+//                sol = new Solution(path);
             }
 
             //get all currState's neigbours
