@@ -22,75 +22,106 @@ public class SearchableMaze implements ISearchable
         int Gcol = maze.getGoalPosition().getColumnIndex();
 
         allStates = new ArrayList<AState>();
-        for (int i=0; i<maze.getRows(); i++)
+
+        //creates all states with zero
+        buildAllStates();
+
+        //initializes 4 neigbours for each state and set start & goal
+        for (int i=0; i<allStates.size(); i++)
         {
-            for (int j=0; j<maze.getCols(); j++)
-            {
-                if(maze.isZero(i,j))
-                {
-                    AState newState = new MazeState(Integer.toString(i)+","+Integer.toString(j));
-                    allStates.add(newState);
+            AState curr = allStates.get(i);
+            curr.getNeigbours()[0] = up(curr);
+            curr.getNeigbours()[1] = right(curr);
+            curr.getNeigbours()[2] = down(curr);
+            curr.getNeigbours()[3] = left(curr);
 
-                    newState.getNeigbours()[0] = up(newState);
-                    newState.getNeigbours()[1] = right(newState);
-                    newState.getNeigbours()[2] = down(newState);
-                    newState.getNeigbours()[3] = left(newState);
+            if (getRowState(curr) == Srow && getColState(curr) == Scol)
+                start = curr;
 
-                    if (i == Srow && j == Scol)
-                        start = newState;
-
-                    if (i == Grow && j == Gcol)
-                        goal = newState;
-                }
-            }
+            if (getRowState(curr) == Grow && getColState(curr) == Gcol)
+                goal = curr;
         }
     }
 
 
     public AState up (AState state)
     {
-        int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0,index));
-        int col = Integer.parseInt(state.getName().substring(index+1));
-        MazeState up = null;
+        int row = getRowState(state);
+        int col = getColState(state);
+        AState up = null;
         if (row-1 >= 0 && maze.isZero(row-1, col))
-            up = new MazeState(Integer.toString(row - 1)+","+Integer.toString(col));
+            up = searchStateByName(row-1, col);
         return up;
     }
 
     public AState right (AState state)
     {
-        int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0,index));
-        int col = Integer.parseInt(state.getName().substring(index+1));
-        MazeState right = null;
+        int row = getRowState(state);
+        int col = getColState(state);
+        AState right = null;
         if (col+1 <= maze.getCols()-1 && maze.isZero(row, col+1))
-            right = new MazeState(Integer.toString(row)+","+Integer.toString(col+1));
+            right = searchStateByName(row, col+1);
         return right;
     }
 
     public AState left (AState state)
     {
-        int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0,index));
-        int col = Integer.parseInt(state.getName().substring(index+1));
-        MazeState left = null;
+        int row = getRowState(state);
+        int col = getColState(state);
+        AState left = null;
         if (col-1 >= 0 && maze.isZero(row, col-1))
-            left = new MazeState(Integer.toString(row)+","+Integer.toString(col-1));
+            left = searchStateByName(row, col-1);
         return left;
     }
 
     public AState down (AState state)
     {
-        int index = state.getName().indexOf(",");
-        int row = Integer.parseInt(state.getName().substring(0,index));
-        int col = Integer.parseInt(state.getName().substring(index+1));
-        MazeState down = null;
+        int row = getRowState(state);
+        int col = getColState(state);
+        AState down = null;
         if (row+1 <= maze.getRows()-1 && maze.isZero(row+1, col))
-            down = new MazeState(Integer.toString(row + 1)+","+Integer.toString(col));
+            down = searchStateByName(row+1, col);
         return down;
     }
 
+
+    private void buildAllStates()
+    {
+        for (int i=0; i<maze.getRows(); i++) {
+            for (int j = 0; j < maze.getCols(); j++) {
+                if (maze.isZero(i, j)) {
+                    AState newState = new MazeState(Integer.toString(i) + "," + Integer.toString(j));
+                    allStates.add(newState);
+                }
+            }
+        }
+    }
+
+    private int getRowState(AState state)
+    {
+        int index = state.getName().indexOf(",");
+        int row = Integer.parseInt(state.getName().substring(0,index));
+        return row;
+    }
+
+    private int getColState(AState state)
+    {
+        int index = state.getName().indexOf(",");
+        int col = Integer.parseInt(state.getName().substring(index+1));
+        return col;
+    }
+
+    private AState searchStateByName(int row, int col)
+    {
+        AState found = null;
+        for (int i=0; i<allStates.size(); i++)
+        {
+           if (getRowState(allStates.get(i)) == row && getColState(allStates.get(i)) == col)
+               found = allStates.get(i);
+        }
+
+        return found;
+    }
 
     @Override
     public ArrayList<AState> getAllPossibleStates(AState state)

@@ -31,7 +31,7 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
             {
                 //building the solution's path
                 ArrayList<AState> path = new ArrayList<AState>();
-                while (currState.getParent() != null)
+                while (currState != null)
                 {
                     path.add(currState);
                     //changes all isVisited back to false
@@ -45,10 +45,13 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
 
             //get all currState's neigbours
             ArrayList<AState> allPossNext = s.getAllPossibleStates(currState);
-            for (int i = 0; i < allPossNext.size(); i++) {
+            for (int i = 0; i < allPossNext.size(); i++)
+            {
                 AState nextState = allPossNext.get(i);
-                if (!nextState.isVisited()) {
+                if (!nextState.isVisited())
+                {
                     nextState.setVisited(true);
+                    visitedNodes ++;
                     nextState.setParent(currState);
                     Q.add(nextState);
                 }

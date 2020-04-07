@@ -4,11 +4,11 @@ public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
 {
 
     protected String name;
-    protected int visitedNoeds;
+    protected int visitedNodes;
 
     @Override
     public String getName() { return name; }
 
-    public int getNumberOfNodesEvaluated() { return visitedNoeds; }
+    public int getNumberOfNodesEvaluated() { return visitedNodes; }
 
 }
