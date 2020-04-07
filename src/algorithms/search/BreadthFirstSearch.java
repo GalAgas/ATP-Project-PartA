@@ -19,7 +19,9 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
     @Override
     public Solution solve(ISearchable s)
     {
+        ArrayList<AState> allEvaluatedStates = new ArrayList<AState>();
         Q.add(s.getStart());
+        allEvaluatedStates.add(s.getStart());
         s.getStart().setVisited(true);
         Solution sol = null;
 
@@ -31,36 +33,23 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
             {
                 //building the solution's path
                 sol = createSolPath (currState);
-                return sol;
-
-//
-//                ArrayList<AState> path = new ArrayList<AState>();
-//                while (currState != null)
-//                {
-//                    path.add(currState);
-//                    //changes all isVisited back to false
-//                    currState.setVisited(false);
-//                    currState = currState.getParent();
-//                }
-//                Collections.reverse(path);
-//                sol = new Solution(path);
+                break;
             }
 
             //get all currState's neigbours
             ArrayList<AState> allPossNext = s.getAllPossibleStates(currState);
-            for (int i = 0; i < allPossNext.size(); i++)
-            {
-                AState nextState = allPossNext.get(i);
-                if (!nextState.isVisited())
-                {
+            for (AState nextState : allPossNext) {
+                if (!nextState.isVisited()) {
                     nextState.setVisited(true);
-                    visitedNodes ++;
+                    visitedNodes++;
                     nextState.setParent(currState);
                     Q.add(nextState);
+                    allEvaluatedStates.add(nextState);
                 }
             }
         }
 
+        setAllVisitedToFalse(allEvaluatedStates);
         return sol;
     }
 

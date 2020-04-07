@@ -15,15 +15,13 @@ public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
     public int getNumberOfNodesEvaluated() { return visitedNodes; }
 
     //building the solution's path
-    public Solution createSolPath (AState currState)
+    protected Solution createSolPath (AState currState)
     {
         Solution sol;
         ArrayList<AState> path = new ArrayList<AState>();
         while (currState != null)
         {
             path.add(currState);
-            //changes all isVisited back to false
-            currState.setVisited(false);
             currState = currState.getParent();
         }
         Collections.reverse(path);
@@ -31,4 +29,11 @@ public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
         return sol;
     }
 
+    //reset all evaluated nodes to unvisited
+    protected void setAllVisitedToFalse (ArrayList<AState> allVisitedNodes)
+    {
+        for (AState visitedNode : allVisitedNodes) {
+            visitedNode.setVisited(false);
+        }
+    }
 }
