@@ -15,11 +15,6 @@ public class SearchableMaze implements ISearchable
     public SearchableMaze(Maze maze)
     {
         this.maze = maze;
-        int Srow = maze.getStartPosition().getRowIndex();
-        int Scol = maze.getStartPosition().getColumnIndex();
-
-        int Grow = maze.getGoalPosition().getRowIndex();
-        int Gcol = maze.getGoalPosition().getColumnIndex();
 
         allStates = new ArrayList<AState>();
 
@@ -27,20 +22,16 @@ public class SearchableMaze implements ISearchable
         buildAllStates();
 
         //initializes 4 neigbours for each state and set start & goal
-        for (int i=0; i<allStates.size(); i++)
-        {
-            AState curr = allStates.get(i);
-            curr.getNeigbours()[0] = up(curr);
-            curr.getNeigbours()[1] = right(curr);
-            curr.getNeigbours()[2] = down(curr);
-            curr.getNeigbours()[3] = left(curr);
+        setNeigbours();
 
-            if (getRowState(curr) == Srow && getColState(curr) == Scol)
-                start = curr;
+        int sRow = maze.getStartPosition().getRowIndex();
+        int sCol = maze.getStartPosition().getColumnIndex();
+        start = searchStateByName(sRow, sCol);
 
-            if (getRowState(curr) == Grow && getColState(curr) == Gcol)
-                goal = curr;
-        }
+        int gRow = maze.getGoalPosition().getRowIndex();
+        int gCol = maze.getGoalPosition().getColumnIndex();
+        goal = searchStateByName(gRow, gCol);
+
     }
 
 
@@ -97,6 +88,16 @@ public class SearchableMaze implements ISearchable
         }
     }
 
+    private void setNeigbours()
+    {
+        for (AState state : allStates) {
+            state.getNeigbours()[0] = up(state);
+            state.getNeigbours()[1] = right(state);
+            state.getNeigbours()[2] = down(state);
+            state.getNeigbours()[3] = left(state);
+        }
+    }
+
     private int getRowState(AState state)
     {
         int index = state.getName().indexOf(",");
@@ -119,7 +120,6 @@ public class SearchableMaze implements ISearchable
            if (getRowState(allStates.get(i)) == row && getColState(allStates.get(i)) == col)
                found = allStates.get(i);
         }
-
         return found;
     }
 
