@@ -6,10 +6,10 @@ public class SimpleMazeGenerator extends AMazeGenerator
 {
     @Override
     public Maze generate(int rows, int cols) {
-        if (rows<3)
-            rows=3;
-        if (cols<3)
-            cols=3;
+        if (rows<6)
+            rows=6;
+        if (cols<6)
+            cols=6;
         Maze simpleMaze = new Maze(rows, cols);
         int rand;
         for (int i=0; i<rows; i++)
