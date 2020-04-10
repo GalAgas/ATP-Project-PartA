@@ -17,13 +17,12 @@ public class SearchableMaze implements ISearchable
     {
         this.maze = maze;
 
-        //allStates = new ArrayList<AState>();
         allStates = new HashMap<>();
 
         //creates all states with zero
         buildAllStates();
 
-        //initializes 4 neigbours for each state and set start & goal
+        //initializes 4 neigbours for each state
         setNeigbours();
 
         int sRow = maze.getStartPosition().getRowIndex();
@@ -200,5 +199,7 @@ public class SearchableMaze implements ISearchable
     public AState getStart() { return start; }
 
     public AState getGoal() { return goal; }
+
+
 
 }

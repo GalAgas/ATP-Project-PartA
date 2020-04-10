@@ -19,6 +19,11 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
     @Override
     public Solution solve(ISearchable s)
     {
+        if (s == null)
+            return null;
+        if (s.getStart() == null || s.getGoal() == null)
+            return null;
+
         ArrayList<AState> allEvaluatedStates = new ArrayList<AState>();
         Q.add(s.getStart());
         allEvaluatedStates.add(s.getStart());
@@ -51,5 +56,6 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
         setAllVisitedToFalse(allEvaluatedStates);
         return sol;
     }
+
 
 }

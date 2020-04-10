@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72cdee8f-82bf-444c-a1be-97046b5b21b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/AState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/AState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +37,99 @@
     <expand />
     <select />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-287079037">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="86" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="86" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/RunSearchOnMaze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+              <folding>
+                <element signature="method#buildAllStates#0;class#SearchableMaze#0" />
+                <element signature="method#searchStateByName#0;class#SearchableMaze#0" />
+                <element signature="method#getAllPossibleStates#0;class#SearchableMaze#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/search/AState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-44">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -46,16 +142,89 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" />
+        <option value="$PROJECT_DIR$/src/algorithms/search/AState.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="819" />
+    <option name="y" value="120" />
+    <option name="width" value="879" />
+    <option name="height" value="1032" />
+  </component>
   <component name="ProjectId" id="1ZhuYmKLhsVwyt4l8sW31QtK3G5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Maze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Maze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Maze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Maze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Maze" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586276763684" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1586514910197" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.RunSearchOnMaze">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -202,15 +371,43 @@
       <option name="project" value="LOCAL" />
       <updated>1586281703114</updated>
     </task>
-    <task id="LOCAL-00013" summary="search-SeachableMaze: updated, ASearchingAlgo-add 2 methods, BFS, AState, MazeState, ISearchable, ISearchingAlgo, Solution&#10;&lt;3">
-      <created>1586350632146</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1586350632146</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="13" />
     <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17489879" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="started-maze, position, EMG, IMG, AMG" />
@@ -232,26 +429,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1586340107387" />
-    <state x="97" y="0" key="CommitChangelistDialog2" timestamp="1586350631510">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1585303803064">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="97" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1586350631510" />
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1586512458792">
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585303803064" />
+    <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1586350153220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586512458792" />
-    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1586512458791">
+    <state width="1237" height="176" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
+    <state width="1237" height="176" key="GridCell.Tab.0.center" timestamp="1586350153220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586512458791" />
-    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1586512458791">
+    <state width="1237" height="176" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
+    <state width="1237" height="176" key="GridCell.Tab.0.left" timestamp="1586350153220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586512458791" />
-    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1586512458792">
+    <state width="1237" height="176" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
+    <state width="1237" height="176" key="GridCell.Tab.0.right" timestamp="1586350153220">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586512458792" />
+    <state width="1237" height="176" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
     <state width="1237" height="218" key="GridCell.Tab.1.bottom" timestamp="1586342598592">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -268,14 +465,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="218" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1586342598592" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1586350634103">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1586350634103" />
-    <state x="303" y="1" key="search.everywhere.popup" timestamp="1586509477210">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1586509477210" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -285,6 +474,55 @@
         <watch expression="((MazeState)newState).neigbours" custom="algorithms.search.MazeState" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/RunSearchOnMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/search/AState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding>
+            <element signature="method#buildAllStates#0;class#SearchableMaze#0" />
+            <element signature="method#searchStateByName#0;class#SearchableMaze#0" />
+            <element signature="method#getAllPossibleStates#0;class#SearchableMaze#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
