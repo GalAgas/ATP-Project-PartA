@@ -2,15 +2,14 @@ package algorithms.search;
 
 import algorithms.mazeGenerators.Maze;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 
 public class SearchableMaze implements ISearchable
 {
     private Maze maze;
     private AState start;
     private AState goal;
-    HashMap<String, AState> allStates;
+    private HashMap<String, AState> allStates;
 
 
     public SearchableMaze(Maze maze)
@@ -32,6 +31,9 @@ public class SearchableMaze implements ISearchable
         int gRow = maze.getGoalPosition().getRowIndex();
         int gCol = maze.getGoalPosition().getColumnIndex();
         goal = searchStateByName(gRow, gCol);
+
+        //initializes all costs
+        setAllCosts();
 
     }
 
@@ -83,6 +85,7 @@ public class SearchableMaze implements ISearchable
             for (int j = 0; j < maze.getCols(); j++) {
                 if (maze.isZero(i, j)) {
                     AState newState = new MazeState(Integer.toString(i) + "," + Integer.toString(j));
+                    newState.setCost(Integer.MAX_VALUE);
                     allStates.put(newState.getName(), newState);
                 }
             }
@@ -200,6 +203,70 @@ public class SearchableMaze implements ISearchable
 
     public AState getGoal() { return goal; }
 
+    public Maze getMaze() {
+        return maze;
+    }
 
+    //delete
+    public HashMap<String, AState> getAllStates() {
+        return allStates;
+    }
+
+    public void setAllCosts()
+    {
+        //need to initialize all costs infinity
+        Queue<AState> q = new LinkedList<AState>();
+        q.add(start);
+        start.setCost(0);
+
+        while (!q.isEmpty()) {
+            AState currState = q.remove();
+            //get all currState's neigbours
+            ArrayList<AState> neighbours = getAllPossibleStates(currState);
+            for (AState state : neighbours)
+            {
+                //does'nt have cost yet
+                if (state.getCost() == Integer.MAX_VALUE)
+                {
+                    q.add(state);
+                    calcCost(state);
+                }
+            }
+        }
+    }
+
+    private void calcCost(AState state)
+    {
+        if (state == null)
+            return;
+        int addition;
+        ArrayList<AState> neighbours = getAllPossibleStates(state);
+        AState minState = findMinCostNeighbour(neighbours);
+        //change to list
+        List<AState> regNeigbours = Arrays.asList(state.getNeigbours());
+        //not diagonal
+        if (regNeigbours.contains(minState))
+            addition = 10;
+        //diagonal
+        else
+            addition = 15;
+        state.setCost(minState.getCost()+addition);
+    }
+    private AState findMinCostNeighbour(ArrayList<AState> neigbours)
+    {
+        if (neigbours == null)
+            return null;
+        int minCost = Integer.MAX_VALUE;
+        AState minState = null;
+        for (AState s: neigbours)
+        {
+            if(s.getCost() < minCost)
+            {
+                minState = s;
+                minCost = s.getCost();
+            }
+        }
+        return minState;
+    }
 
 }

@@ -1,6 +1,6 @@
 package algorithms.search;
 
-public abstract class AState
+public abstract class AState implements Comparable<AState>
 {
     private String name;
     private int cost;
@@ -52,6 +52,16 @@ public abstract class AState
 
     public String toString() { return name; }
 
+    public int compareTo(AState other)
+    {
+        if (other == null) //check?
+            return 0;
+        if (other.getCost() < cost)
+            return 1;
+        else if (other.getCost()==cost)
+            return 0;
+        return -1;
+    }
 
 }
 

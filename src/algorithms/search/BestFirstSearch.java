@@ -10,8 +10,7 @@ public class BestFirstSearch extends BreadthFirstSearch
         Q = new PriorityQueue<AState>();
     }
 
-    @Override
-    public Solution solve(ISearchable s) {
-        return null;
-    }
+//    public Solution solve(ISearchable s) {
+//        return null;
+//    }
 }

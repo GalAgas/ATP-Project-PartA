@@ -10,12 +10,22 @@ import java.util.ArrayList;
 
 public class RunSearchOnMaze {
     public static void main(String[] args) {
-        IMazeGenerator mg = new MyMazeGenerator();
-        Maze maze = mg.generate(1000, 1000);
+        //IMazeGenerator mg = new MyMazeGenerator();
+        IMazeGenerator mg = new EmptyMazeGenerator();
+        Maze maze = mg.generate(10, 10);
         SearchableMaze searchableMaze = new SearchableMaze(maze);
+
+        maze.print();
+//        for (AState s:searchableMaze.getAllStates().values()) {
+//            System.out.println(s.getName());
+//
+//            System.out.println(s.getCost());
+//            System.out.println("****");
+//        }
+
         solveProblem(searchableMaze, new BreadthFirstSearch());
-        solveProblem(searchableMaze, new DepthFirstSearch());
-        //solveProblem(searchableMaze, new BestFirstSearch());
+        //solveProblem(searchableMaze, new DepthFirstSearch());
+        solveProblem(searchableMaze, new BestFirstSearch());
     }
 
     private static void solveProblem(ISearchable domain, ISearchingAlgorithm searcher) {
@@ -31,10 +41,13 @@ public class RunSearchOnMaze {
         System.out.println(String.format("'%s' algorithm - nodes evaluated: %s", searcher.getName(), searcher.getNumberOfNodesEvaluated()));
 //        // Printing Solution Path
 //        System.out.println("Solution path:");
-//        ArrayList<AState> solutionPath = solution.getSolutionPath();
-//        for (int i = 0; i < solutionPath.size(); i++)
-//        {
-//            System.out.println(String.format("%s. %s",i,solutionPath.get(i)));
-//        }
+        ArrayList<AState> solutionPath = solution.getSolutionPath();
+        for (int i = 0; i < solutionPath.size(); i++)
+        {
+            System.out.println(String.format("%s. %s",i,solutionPath.get(i)));
+        }
+
+        System.out.println(domain.getGoal().getCost());
+
     }
 }
