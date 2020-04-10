@@ -204,6 +204,7 @@ public class SearchableMaze implements ISearchable
     public AState getGoal() { return goal; }
 
 
+
     public void setAllCosts()
     {
         //need to initialize all costs infinity
@@ -234,7 +235,6 @@ public class SearchableMaze implements ISearchable
         int addition;
         ArrayList<AState> neighbours = getAllPossibleStates(state);
         AState minState = findMinCostNeighbour(neighbours);
-        //change to list
         List<AState> regNeigbours = Arrays.asList(state.getNeigbours());
         //not diagonal
         if (regNeigbours.contains(minState))
