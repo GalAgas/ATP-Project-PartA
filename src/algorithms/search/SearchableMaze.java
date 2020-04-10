@@ -203,14 +203,6 @@ public class SearchableMaze implements ISearchable
 
     public AState getGoal() { return goal; }
 
-    public Maze getMaze() {
-        return maze;
-    }
-
-    //delete
-    public HashMap<String, AState> getAllStates() {
-        return allStates;
-    }
 
     public void setAllCosts()
     {
