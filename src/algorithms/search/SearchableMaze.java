@@ -3,20 +3,22 @@ package algorithms.search;
 import algorithms.mazeGenerators.Maze;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class SearchableMaze implements ISearchable
 {
     private Maze maze;
     private AState start;
     private AState goal;
-    private ArrayList<AState> allStates;
+    HashMap<String, AState> allStates;
 
 
     public SearchableMaze(Maze maze)
     {
         this.maze = maze;
 
-        allStates = new ArrayList<AState>();
+        //allStates = new ArrayList<AState>();
+        allStates = new HashMap<>();
 
         //creates all states with zero
         buildAllStates();
@@ -82,7 +84,7 @@ public class SearchableMaze implements ISearchable
             for (int j = 0; j < maze.getCols(); j++) {
                 if (maze.isZero(i, j)) {
                     AState newState = new MazeState(Integer.toString(i) + "," + Integer.toString(j));
-                    allStates.add(newState);
+                    allStates.put(newState.getName(), newState);
                 }
             }
         }
@@ -90,11 +92,12 @@ public class SearchableMaze implements ISearchable
 
     private void setNeigbours()
     {
-        for (AState state : allStates) {
-            state.getNeigbours()[0] = up(state);
-            state.getNeigbours()[1] = right(state);
-            state.getNeigbours()[2] = down(state);
-            state.getNeigbours()[3] = left(state);
+        for (AState val : allStates.values())
+        {
+            val.getNeigbours()[0] = up(val);
+            val.getNeigbours()[1] = right(val);
+            val.getNeigbours()[2] = down(val);
+            val.getNeigbours()[3] = left(val);
         }
     }
 
@@ -114,13 +117,11 @@ public class SearchableMaze implements ISearchable
 
     private AState searchStateByName(int row, int col)
     {
-        AState found = null;
-        for (int i=0; i<allStates.size(); i++)
-        {
-           if (getRowState(allStates.get(i)) == row && getColState(allStates.get(i)) == col)
-               found = allStates.get(i);
-        }
-        return found;
+        String key = Integer.toString(row) + "," + Integer.toString(col);
+        AState val = null;
+        if (allStates.containsKey(key))
+            val = allStates.get(key);
+        return val;
     }
 
     @Override

@@ -9,7 +9,7 @@ import java.util.Queue;
 
 public class BreadthFirstSearch extends ASearcinghAlgorithm {
 
-    private Queue<AState> Q;
+    protected Queue<AState> Q;
 
     public BreadthFirstSearch() {
         super.name = "Breadth First Search";
@@ -48,7 +48,6 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
                 }
             }
         }
-
         setAllVisitedToFalse(allEvaluatedStates);
         return sol;
     }

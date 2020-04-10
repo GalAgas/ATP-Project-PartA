@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72cdee8f-82bf-444c-a1be-97046b5b21b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/AMazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/EmptyMazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BestFirstSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/search/SearchableMaze.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunMazeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RunSearchOnMaze.java" afterDir="false" />
     </list>
@@ -61,7 +57,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
-  <component name="RunManager" selected="Application.RunMazeGenerator">
+  <component name="RunManager" selected="Application.RunSearchOnMaze">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Maze" />
@@ -105,8 +101,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.RunSearchOnMaze" />
+        <item itemvalue="Application.RunMazeGenerator" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -206,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586281703114</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="search-SeachableMaze: updated, ASearchingAlgo-add 2 methods, BFS, AState, MazeState, ISearchable, ISearchingAlgo, Solution&#10;&lt;3">
+      <created>1586350632146</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586350632146</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -229,26 +232,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1586340107387" />
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1585303803064">
+    <state x="97" y="0" key="CommitChangelistDialog2" timestamp="1586350631510">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585303803064" />
-    <state width="1237" height="176" key="GridCell.Tab.0.bottom" timestamp="1586350153220">
+    <state x="97" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1586350631510" />
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1586512458792">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
-    <state width="1237" height="176" key="GridCell.Tab.0.center" timestamp="1586350153220">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586512458792" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1586512458791">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
-    <state width="1237" height="176" key="GridCell.Tab.0.left" timestamp="1586350153220">
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1586512458791" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1586512458791">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
-    <state width="1237" height="176" key="GridCell.Tab.0.right" timestamp="1586350153220">
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1586512458791" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1586512458792">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="176" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586350153220" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1586512458792" />
     <state width="1237" height="218" key="GridCell.Tab.1.bottom" timestamp="1586342598592">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -265,6 +268,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="218" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1586342598592" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1586350634103">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1586350634103" />
+    <state x="303" y="1" key="search.everywhere.popup" timestamp="1586509477210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1586509477210" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
