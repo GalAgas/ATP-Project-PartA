@@ -9,8 +9,5 @@ public class BestFirstSearch extends BreadthFirstSearch
         name = "Best First Search";
         Q = new PriorityQueue<AState>();
     }
-
-//    public Solution solve(ISearchable s) {
-//        return null;
-//    }
+    
 }
