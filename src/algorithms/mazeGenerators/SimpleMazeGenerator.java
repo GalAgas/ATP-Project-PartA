@@ -1,15 +1,17 @@
 package algorithms.mazeGenerators;
 
+import com.sun.deploy.security.SelectableSecurityManager;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SimpleMazeGenerator extends AMazeGenerator
 {
     @Override
     public Maze generate(int rows, int cols) {
-        if (rows<6)
-            rows=6;
-        if (cols<6)
-            cols=6;
+        if (rows<2)
+            rows=2;
+        if (cols<2)
+            cols=2;
         Maze simpleMaze = new Maze(rows, cols);
         int rand;
         for (int i=0; i<rows; i++)

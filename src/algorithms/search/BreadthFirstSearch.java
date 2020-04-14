@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreadthFirstSearch extends ASearcinghAlgorithm {
+public class BreadthFirstSearch extends ASearchingAlgorithm {
 
     protected Queue<AState> Q;
 
@@ -56,6 +56,5 @@ public class BreadthFirstSearch extends ASearcinghAlgorithm {
         setAllVisitedToFalse(allEvaluatedStates);
         return sol;
     }
-
 
 }

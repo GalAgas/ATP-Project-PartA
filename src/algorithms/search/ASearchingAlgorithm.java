@@ -3,7 +3,7 @@ package algorithms.search;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public abstract class ASearcinghAlgorithm implements ISearchingAlgorithm
+public abstract class ASearchingAlgorithm implements ISearchingAlgorithm
 {
 
     protected String name;

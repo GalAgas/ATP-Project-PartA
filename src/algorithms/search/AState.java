@@ -5,13 +5,13 @@ public abstract class AState implements Comparable<AState>
     private String name;
     private int cost;
     private AState parent;
-    private AState[] neigbours;
+    private AState[] neighbours;
     private boolean isVisited;
 
     public AState(String name)
     {
         this.name = name;
-        neigbours = new AState[4];
+        neighbours = new AState[4];
         isVisited = false;
     }
 
@@ -48,7 +48,7 @@ public abstract class AState implements Comparable<AState>
 
     public void setVisited(boolean visited) { isVisited = visited; }
 
-    public AState[] getNeigbours() { return neigbours; }
+    public AState[] getNeigbours() { return neighbours; }
 
     public String toString() { return name; }
 

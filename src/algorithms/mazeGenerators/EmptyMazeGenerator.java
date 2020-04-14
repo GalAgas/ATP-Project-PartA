@@ -4,10 +4,10 @@ public class EmptyMazeGenerator extends AMazeGenerator{
     @Override
     public Maze generate(int rows, int cols)
     {
-        if (rows<6)
-            rows=6;
-        if (cols<6)
-            cols=6;
+        if (rows<2)
+            rows=2;
+        if (cols<2)
+            cols=2;
         Maze emptyMaze = new Maze(rows, cols);
         for (int i=0; i<rows; i++)
         {

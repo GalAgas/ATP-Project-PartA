@@ -8,5 +8,4 @@ public class MazeState extends AState
         super(name);
     }
 
-
 }

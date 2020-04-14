@@ -21,8 +21,8 @@ public class SearchableMaze implements ISearchable
         //creates all states with zero
         buildAllStates();
 
-        //initializes 4 neigbours for each state
-        setNeigbours();
+        //initializes 4 neighbours for each state
+        setNeighbours();
 
         int sRow = maze.getStartPosition().getRowIndex();
         int sCol = maze.getStartPosition().getColumnIndex();
@@ -92,7 +92,7 @@ public class SearchableMaze implements ISearchable
         }
     }
 
-    private void setNeigbours()
+    private void setNeighbours()
     {
         for (AState val : allStates.values())
         {
@@ -203,8 +203,6 @@ public class SearchableMaze implements ISearchable
 
     public AState getGoal() { return goal; }
 
-
-
     public void setAllCosts()
     {
         //need to initialize all costs infinity
@@ -214,7 +212,7 @@ public class SearchableMaze implements ISearchable
 
         while (!q.isEmpty()) {
             AState currState = q.remove();
-            //get all currState's neigbours
+            //get all currState's neighbours
             ArrayList<AState> neighbours = getAllPossibleStates(currState);
             for (AState state : neighbours)
             {
@@ -235,22 +233,23 @@ public class SearchableMaze implements ISearchable
         int addition;
         ArrayList<AState> neighbours = getAllPossibleStates(state);
         AState minState = findMinCostNeighbour(neighbours);
-        List<AState> regNeigbours = Arrays.asList(state.getNeigbours());
+        List<AState> regNeighbours = Arrays.asList(state.getNeigbours());
         //not diagonal
-        if (regNeigbours.contains(minState))
+        if (regNeighbours.contains(minState))
             addition = 10;
         //diagonal
         else
             addition = 15;
         state.setCost(minState.getCost()+addition);
     }
-    private AState findMinCostNeighbour(ArrayList<AState> neigbours)
+
+    private AState findMinCostNeighbour(ArrayList<AState> neighbours)
     {
-        if (neigbours == null)
+        if (neighbours == null)
             return null;
         int minCost = Integer.MAX_VALUE;
         AState minState = null;
-        for (AState s: neigbours)
+        for (AState s: neighbours)
         {
             if(s.getCost() < minCost)
             {

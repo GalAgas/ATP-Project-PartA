@@ -17,8 +17,8 @@ public abstract class AMazeGenerator implements IMazeGenerator
 
     public void chooseStartandGoal(Maze maze, int rows, int cols)
     {
-        List<Integer> rowsList = new ArrayList<>(); //list of all relevant rows to choose from
-        for (int i=1; i<rows-1; i++)
+        List<Integer> rowsList = new ArrayList<>(); //list of all rows
+        for (int i=0; i<rows; i++)
             rowsList.add(i);
         //START
         boolean found = false; //checks if the random row we got has only 1's - if not we found the row
@@ -28,7 +28,7 @@ public abstract class AMazeGenerator implements IMazeGenerator
         {
             Random rand = new Random();
             RowforStart = rowsList.get(rand.nextInt(rowsList.size())); //randomly chooses a row from the rows list
-            for (int i=1; i<cols-1; i++) //iterates over the relevant cols (from the start)
+            for (int i=0; i<cols; i++) //iterates over the relevant cols (from the start)
             {
                 if (maze.isZero(RowforStart, i)) //checks if cell is 0
                 {
@@ -39,12 +39,8 @@ public abstract class AMazeGenerator implements IMazeGenerator
             }
         }
         maze.setStartPosition(RowforStart, ColforStart); //sets start position
-        //removes the chosen row for start position and the row before it and after
+        //removes the chosen row for start position
         rowsList.remove(Integer.valueOf(RowforStart));
-        if (RowforStart-1 > 0)
-            rowsList.remove(Integer.valueOf(RowforStart-1));
-        if (RowforStart+1 < rows-1)
-            rowsList.remove(Integer.valueOf(RowforStart+1));
         //GOAL
         boolean found2 = false; //checks if the random row we got has only 1's - if not we found the row
         int RowforGoal = 0;
@@ -53,7 +49,7 @@ public abstract class AMazeGenerator implements IMazeGenerator
         {
             Random rand = new Random();
             RowforGoal = rowsList.get(rand.nextInt(rowsList.size())); //randomly chooses a row from the rows list
-            for (int i=cols-2; i>0; i--) //iterates over the relevant cols (from the end)
+            for (int i=cols-1; i>=0; i--) //iterates over the relevant cols (from the end)
             {
                 if (maze.isZero(RowforGoal, i)) //checks if cell is 0
                 {
@@ -65,6 +61,57 @@ public abstract class AMazeGenerator implements IMazeGenerator
         }
         maze.setGoalPosition(RowforGoal, ColforGoal); //sets goal position
     }
+
+//    public void chooseStartandGoal(Maze maze, int rows, int cols)
+//    {
+//        List<Integer> rowsList = new ArrayList<>(); //list of all relevant rows to choose from
+//        for (int i=1; i<rows-1; i++)
+//            rowsList.add(i);
+//        //START
+//        boolean found = false; //checks if the random row we got has only 1's - if not we found the row
+//        int RowforStart = 0;
+//        int ColforStart = 0;
+//        while (!found)
+//        {
+//            Random rand = new Random();
+//            RowforStart = rowsList.get(rand.nextInt(rowsList.size())); //randomly chooses a row from the rows list
+//            for (int i=1; i<cols-1; i++) //iterates over the relevant cols (from the start)
+//            {
+//                if (maze.isZero(RowforStart, i)) //checks if cell is 0
+//                {
+//                    ColforStart = i;
+//                    found = true;
+//                    break;
+//                }
+//            }
+//        }
+//        maze.setStartPosition(RowforStart, ColforStart); //sets start position
+//        //removes the chosen row for start position and the row before it and after
+//        rowsList.remove(Integer.valueOf(RowforStart));
+//        if (RowforStart-1 > 0)
+//            rowsList.remove(Integer.valueOf(RowforStart-1));
+//        if (RowforStart+1 < rows-1)
+//            rowsList.remove(Integer.valueOf(RowforStart+1));
+//        //GOAL
+//        boolean found2 = false; //checks if the random row we got has only 1's - if not we found the row
+//        int RowforGoal = 0;
+//        int ColforGoal = 0;
+//        while (!found2)
+//        {
+//            Random rand = new Random();
+//            RowforGoal = rowsList.get(rand.nextInt(rowsList.size())); //randomly chooses a row from the rows list
+//            for (int i=cols-2; i>0; i--) //iterates over the relevant cols (from the end)
+//            {
+//                if (maze.isZero(RowforGoal, i)) //checks if cell is 0
+//                {
+//                    ColforGoal = i;
+//                    found2 = true;
+//                    break;
+//                }
+//            }
+//        }
+//        maze.setGoalPosition(RowforGoal, ColforGoal); //sets goal position
+//    }
 
     /*public int chooseRandCol(Maze maze, int row, int colLength)
     {

@@ -3,7 +3,7 @@ package algorithms.search;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class DepthFirstSearch extends ASearcinghAlgorithm
+public class DepthFirstSearch extends ASearchingAlgorithm
 {
     private Stack<AState> stack;
 
