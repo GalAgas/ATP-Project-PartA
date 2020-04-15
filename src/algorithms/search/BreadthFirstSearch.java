@@ -28,7 +28,8 @@ public class BreadthFirstSearch extends ASearchingAlgorithm {
         Q.add(s.getStart());
         allEvaluatedStates.add(s.getStart());
         s.getStart().setVisited(true);
-        Solution sol = null;
+
+        Solution sol = new Solution(new ArrayList<>());
 
         while (!Q.isEmpty()) {
             AState currState = Q.remove();

@@ -20,7 +20,7 @@ public class DepthFirstSearch extends ASearchingAlgorithm
         AState goal = s.getGoal();
         if (start == null || goal == null) //input check
             return null;
-        Solution sol = null;
+        Solution sol = new Solution(new ArrayList<>());
         ArrayList<AState> allEvaluatedStates = new ArrayList<AState>();
         //there is more than one state in the path
         start.setVisited(true);
