@@ -8,7 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72cdee8f-82bf-444c-a1be-97046b5b21b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/MyMazeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/mazeGenerators/SimpleMazeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -299,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586888361144</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="changed MyMazeGenerator smaller than 3 (or equal) to empty maze">
+      <created>1586942807375</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1586942807375</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -314,7 +321,8 @@
     <MESSAGE value="search-SeachableMaze-updated to hashmap, BFS-added null checks &lt;3" />
     <MESSAGE value="search-Best, AState-comparable, searchableMaze-cost func &lt;3" />
     <MESSAGE value="set the smallest maze to 2X2 and changed the random function" />
-    <option name="LAST_COMMIT_MESSAGE" value="set the smallest maze to 2X2 and changed the random function" />
+    <MESSAGE value="changed MyMazeGenerator smaller than 3 (or equal) to empty maze" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed MyMazeGenerator smaller than 3 (or equal) to empty maze" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="50" key="#com.intellij.ide.util.MemberChooser" timestamp="1585395710942">
@@ -325,10 +333,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="492" y="233" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.680@0.0.1280.680" timestamp="1586340107387" />
-    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1586888360381">
+    <state x="277" y="0" key="CommitChangelistDialog2" timestamp="1586942806816">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1586888360381" />
+    <state x="277" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1586942806816" />
     <state width="1237" height="150" key="GridCell.Tab.0.bottom" timestamp="1586942733393">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -361,10 +369,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1586886460873" />
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1586888364543">
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2" timestamp="1586942808777">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1586888364543" />
+    <state x="233" y="77" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1586942808777" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
