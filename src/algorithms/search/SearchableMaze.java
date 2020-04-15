@@ -205,7 +205,6 @@ public class SearchableMaze implements ISearchable
 
     public void setAllCosts()
     {
-        //need to initialize all costs infinity
         Queue<AState> q = new LinkedList<AState>();
         q.add(start);
         start.setCost(0);
